@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<title>Sistema Egresados</title>
+<meta charset="utf-8" >
+<link type="image/x-icon" rel="shortcut icon" href="http://egresados.ujcm.edu.pe/images/sistema/favicon.ico" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" /> 
+<meta name="viewport" content="width=device-width, initial-scale=1.0" /> 
+<!--<link href="http://fonts.googleapis.com/css?family=Oswald" rel="stylesheet" type="text/css" />-->
+<link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+<!-- CSS GLOBALES -->
+<link type="text/css" rel="stylesheet" href="http://egresados.ujcm.edu.pe/css/metro-bootstrap.css" />
+<link type="text/css" rel="stylesheet" href="http://egresados.ujcm.edu.pe/css/metro-bootstrap-responsive.css" />
+<link type="text/css" rel="stylesheet" href="http://egresados.ujcm.edu.pe/css/iconFont.css" />
+<link type="text/css" rel="stylesheet" href="http://egresados.ujcm.edu.pe/css/docs.css" />
+<link type="text/css" rel="stylesheet" href="http://egresados.ujcm.edu.pe/css/prettify.css" />
+<link type="text/css" rel="stylesheet" href="http://egresados.ujcm.edu.pe/css/load.css" />
+<!-- CSS VISTA -->
+<!-- JS GLOBALES -->
+<script type="text/javascript" language="javascript" src="http://egresados.ujcm.edu.pe/js/jquery/jquery.min.js"></script>
+<script type="text/javascript" language="javascript" src="http://egresados.ujcm.edu.pe/js/jquery/jquery.widget.min.js"></script>
+<script type="text/javascript" language="javascript" src="http://egresados.ujcm.edu.pe/js/jquery/jquery.mousewheel.js"></script>
+<script type="text/javascript" language="javascript" src="http://egresados.ujcm.edu.pe/js/prettify/prettify.js"></script>
+<script type="text/javascript" language="javascript" src="http://egresados.ujcm.edu.pe/js/docs.js"></script>
+<script type="text/javascript" language="javascript" src="http://egresados.ujcm.edu.pe/js/jquery.reveal.js"></script>
+<script type="text/javascript" language="javascript" src="http://egresados.ujcm.edu.pe/js/loading.js"></script>
+<!-- JS VISTA -->  <body>
+<div class="prin">
+    <div class="metro">
+        <div style="background: url(http://egresados.ujcm.edu.pe/images/baner_egresa2.png) top left no-repeat; background-size: cover; height: 300px;">
+            <div class="container" style="padding: 50px 20px;text-align: right;">
+                <h1 class="fg-white">Sistema de Seguimiento <br /> a los Egresados</h1>
+                <h2 class="fg-white" style="text-align: right;background: #731E1E;margin-left: 20%;">
+                    La Univesidad José Carlos Mariátegui <br /> Rumbo a la acreditación
+                </h2>
+
+              
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="grid">
+                <div class="row">
+                    <div class="span9">
+
+                    <div class="grid no-margin">
+                        <div class="row">
+                        <p> Si es la primera vez que ingresa:</p>
+                            <div class="span3 no-tablet-portrait no-phone">
+                                <div class="notice marker-on-right bg-lighterBlue padding20 text-center">
+                                    <p class="fg-white" style="font-size: 120px; line-height: 80px;letter-spacing: 0.0em;">5 <span class="fg-white" style="font-size:20px">pasos</span></p> 
+                                    <p class="subheader-secondary fg-white">Ingresa a tu cuenta</p>
+                                </div>
+                            </div>
+                            <div class="span5">
+                                
+                                <ol class="styled" style="font-size: 1.3rem;">
+								<li style="width: 90%">Has click en el botón "Registrar".</li>
+                                    <!-- <li style="width: 90%">Coloca tu código Universitario y da click en "ingresar"</li> -->
+                                    <li style="width: 90%">Completa el formulario de registro cuidadosamente.</li>
+
+                                   <!--  <li style="width: 90%">Una vez que ingresas, completa todos tus datos e ingresa una contraseña.</strong></li> -->
+                                    <li style="width: 90%">Una vez que ingresas, completa todos tus datos hasta el 90% para imprimir tu <strong>ficha de egresado.</strong></strong></li>
+
+
+                                    <!--<li style="width: 90%">En tu próximo ingreso inicia sesión con el código universitario y la contraseña que elegiste.</li>-->
+                                    <li style="width: 90%">En tu próximo ingreso inicia sesión con el código universitario y DNI que registraste.</li>
+
+                                    <!-- <li style="width: 90%">Si necesitas que te recordemos tu contraseña, esta llegará a tu correo electrónico que registraste</li>-->
+                                    <li style="width: 90%"> Consultas sobre Activación/Ingreso a tu cuenta de egresados, escribir a: <a href="mailto:mundoupn@upnorte.edu.pe" target="_blank">acreditacion.ujcm@gmail.com</a></li>
+                                </ol>
+                            </div>
+                        </div>
+                    </div>
+                    </div>
+
+
+                     <div class="span5">
+                            
+
+                            <h2 id="_default"><i class="icon-accessibility on-left"></i>Ingreso al Sistema</h2>
+                            <div class="example">
+                                    <fieldset>
+                                    <div class="checkbox" style="display:none"></div>
+                                        <label>Código Universitario</label>
+                                        <div class="input-control text" data-role="input-control">
+                                            <input type="text" name="codigo" id="codigo" placeholder="Ingrese su código universitario">
+                                            <button class="btn-clear" tabindex="-1"></button>
+                                        </div>
+
+                                        <label>Dni</label>
+                                         <div class="input-control text"data-role="input-control">
+
+                                             <input type="text" name="dni" id="dni" placeholder="Ingrese su dni">
+                                            <button class="btn-clear" tabindex="-1"></button>
+                                        </div>
+                                        <br/>
+                                      <div class="input-control text"data-role="input-control">
+                                       <button type="button" class="button success entrar" ><i class="icon-user-3 on-left"></i>Ingresar</button>
+                                       <button type="button" class="button default registrar">Registrar</button>
+                                       </div>
+                                    </fieldset>
+                            </div>
+
+                   </div>
+                       
+                    
+
+                </div>
+            </div>
+        </div>
+
+
+
+   <script type="text/javascript">
+
+    $(document).ready(function() {
+
+		//	$('#aviso').modal('show');
+
+    });
+    </script>
+
+    <script>
+	
+     var correo='fff';//$("#correo").val();
+     var baseUrl="http://egresados.ujcm.edu.pe/login/login";   
+     /* !function ($) {
+        $(function(){
+          // carousel demo
+          $('#myCarousel').carousel()
+        })
+      }(window.jQuery)*/
+      $("#codigo,#dni").click(function(){
+        $(".alert").remove();
+      });    
+
+      $(".registrar").click(function(){
+        
+      location.href=baseUrl+"/registro";
+      });
+
+      $(".entrar").click(function(){
+        //var msgerror='ss';
+        var dni=$("#dni").val();
+        var codigo=$("#codigo").val();
+        //console.log("dni:::"+dni+" codigo:::"+codigo);
+         
+          if(dni=='' && codigo==''){
+            //console.log('rellene datos');
+            msgerror='  Digite su cuenta.';
+            error_(msgerror);
+          }else
+          {
+           $.ajax({
+                  type: 'POST',
+                  cache:false,
+                  data:"codigo="+codigo+"&dni="+dni,
+                  url:baseUrl+"/entrar",
+                  beforeSend:function(){
+                    loading();
+                      
+                  },
+                  success: function (response) {     
+                   // alert(response);
+                      if(response=="no"){                      
+                         msgerror=' Usuario no existe.';
+                         error_(msgerror);   
+                      }else{                        
+                       location.href=baseUrl+"/perfil";
+                                                                  
+                      }
+                      closeLoading();                             
+                  },
+                  error: function (response) {
+                   // alert(response)
+                      //console.log("Erro:ajax");
+                  }
+              });
+         }
+     function error_(msgerror){
+        $('.alert').remove();
+        var html = '<div class="alert alert-block alert-danger fade in"><button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>Error: '+msgerror+'</div>';
+        $('.checkbox').after(html); 
+     }    
+
+
+
+
+
+
+
+    });
+
+   ///REGISTRO 
+
+    </script>
+
+
+ 
+</div>
+﻿
+      <!-- FOOTER -->
+      <!--<footer style="text-align: center;background: #495662;color: #fff;padding: 30px 0 30px;">-->
+      
+<div class="metro">
+ <div class="bg-dark">
+            <div class="container" style="padding: 10px 0;">
+
+                <div class="grid no-margin">
+                    <div class="row no-margin">
+                        
+                        <div class="span8 padding10">
+                            <h3 class="fg-white">Soporte Técnico: </h3>
+                            <p class="fg-white">paginaweb@ujcm.edu.pe<span>|</span><span>|</span><br/> Horario de atención: Lunes a Sábado de 8:10am a 1:00pm - 3:00pm a 5:30pm <span>|</span><span>|</span><br/></p>
+                        </div>
+						<div class="span4" style="float: right;">
+							<div class="listview small text-center padding20">
+										<a href="/admin/admin" class="list">
+											<div class="list-content fg-white bg-emerald">
+											   <span class="icon-user-3 " style="font-size: 58px;float: left;"></span>
+												<div class="data">
+													<span class="list-title">
+													Ingreso a las <br/>Direcciones de Carrera</span>
+ 													
+												</div>
+											</div>
+										</a>                                                                      
+							</div>
+						</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="container tertiary-text bg-dark fg-white" style="padding: 10px">
+                2014 Oficina de Acreditación, UJCM. &copy; </a>
+            </div>
+        </div>
+  </div>
+</div><!-- /.container -->
+
+
+
+
+  </body>
+
+
+
+  <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-53379713-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+</html>
