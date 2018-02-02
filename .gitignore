@@ -54,5 +54,7 @@ $RECYCLE.BIN/
 # Windows shortcuts
 *.lnk
 
+#files about
+index1.html
 
 # End of https://www.gitignore.io/api/macos,bower,windows

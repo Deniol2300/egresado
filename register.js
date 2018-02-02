@@ -13,6 +13,12 @@ $('document').ready(function()
         return this.optional(element) || eregex.test(value);
     });
 
+    //deni validation
+    var dniregex = /^[0-9]+$/;
+    $.validator.addMethod("validdni",function(value,element){
+        return this.optional(element) || dniregex.test(value);
+    });
+
     //valid password
     // var pasregex = /^([a-z]+[0-9]+)|([0-9]+[a-z]+)/i;
     // $.validator.addMethod("validpassword",function(value,element){
@@ -33,6 +39,11 @@ $("#register-form").validate({
             required: true,
             validname: true,
             minlength: 4
+        },
+        dni: {
+            required: true,
+            validdni: true,
+            maxlength: 8
         },
         email:{
             required: true,
@@ -57,6 +68,11 @@ $("#register-form").validate({
             required: "Ingrese  el nombre de Usuario",
             validname: "El nombre deberia contener solo letras del alfabeto y espacio",
             minlength: "Nombre muy corto"
+        },
+        dni:{
+            required: "Ingrese DNI",
+            validdni: "El dni debe contener solo numeros",
+            maxlength: "El DNI debe contener 8 numeros como maximo"
         },
         email: {
             required: "Ingrese su Email",
