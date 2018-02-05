@@ -14,9 +14,34 @@ $('document').ready(function()
     });
 
     //deni validation
-    var dniregex = /^[0-9]+$/;
+    var dniregex = /^[0-9{8}]+$/;
     $.validator.addMethod("validdni",function(value,element){
         return this.optional(element) || dniregex.test(value);
+    });
+
+    //apellidoP validation
+
+    var aPregex = /^[a-zA-Z ]+$/;
+    $.validator.addMethod("validaP",function(value,element){
+        return this.optional(element)|| aPregex.test(value);
+    });
+
+    //apellidoM validation
+    var aMregex = /^[a-zA-Z ]+$/;
+    $.validator.addMethod("validaM",function(value,element){
+        return this.optional(element)|| aMregex.test(value);
+    });
+    
+    //inregex validation
+    var inregex = /^[0-9{8}]+$/;
+    $.validator.addMethod("validin",function(value,element){
+        return this.optional(element) || inregex.test(value);
+    });
+
+    //egregex validation
+    var egregex = /^[0-9{8}]+$/;
+    $.validator.addMethod("valideg",function(value,element){
+        return this.optional(element) || egregex.test(value);
     });
 
     //valid password
@@ -61,6 +86,22 @@ $("#register-form").validate({
             required: true,
             equalTo: '#password'
         },
+        apellidoP:{
+            required: true,
+            validaP: true,
+        },
+        apellidoM:{
+            required: true,
+            validaM: true,
+        },
+        aingreso:{
+            required: true,
+            maxlength: 4
+        },
+        aegreso:{
+            required: true,
+            maxlength: 4
+        }
     },
     messages:
     {
@@ -85,6 +126,22 @@ $("#register-form").validate({
         cpassword: {
             required: "Reingrese su contraseña",
             equalTo: "La contraseña no concuerda!"
+        },
+        apellidoP:{
+            required: "Ingrese su Apellido Paterno",
+            validaP: "El Apellido Paterno debe contener solo letras"
+        },
+        apellidoM:{
+            required:"Ingrese su Apellido Materno",
+            validaM:"El Apellido Materno debe contener solo letras"
+        },
+        aingreso:{
+            required:"Ingrese el año de Ingreso",
+            maxlength: "El año no debe ser superior a 4 digitos"
+        },
+        aegreso:{
+            required:"Ingrese el año de Egreso",
+            maxlength:"EL año no debe ser superior a 4 digitos"
         }
     },
 

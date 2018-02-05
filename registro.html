@@ -33,6 +33,7 @@
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
 <!-- <script src="js/bootstra.js"></script> -->
 <script src="js/jquery-3.3.1.min.js"></script>
@@ -76,6 +77,42 @@
                 </div>
 
                 <div class="form-group">
+                        <div class="input-group">
+                            <div class="input-group-addon"><span class="glyphicon glyphicon-pencil"></span></div>
+                            <input type="text" name="apellidoP" class="form-control" placeholder="Ingrese Apellido Paterno" style="text-transform:uppercase;" >
+                        </div>
+                        <span class="help-block" id="error"></span>
+                </div>
+
+                
+                <div class="form-group">
+                        <div class="input-group">
+                            <div class="input-group-addon"><span class="glyphicon glyphicon-pencil"></span></div>
+                            <input type="text" name="apellidoM" class="form-control" placeholder="Ingrese Apellido Materno" style="text-transform:uppercase;">
+                        </div>
+                        <span class="help-block" id="error"></span>
+                </div>
+
+                <div class="row">
+                <div class="form-group col-lg-6">
+                        <div class="input-group">
+                            <div class="input-group-addon"><span class="glyphicon glyphicon-pencil"></span></div>
+                            <input type="text" name="aingreso" class="form-control" placeholder="Ingrese Año de Ingreso" >
+                        </div>
+                        <span class="help-block" id="error"></span>
+                </div>
+
+                <div class="form-group col-lg-6">
+                        <div class="input-group">
+                            <div class="input-group-addon"><span class="glyphicon glyphicon-pencil"></span></div>
+                            <input type="text" name="aegreso" class="form-control" placeholder="Ingrese Año de Egreso" >
+                        </div>
+                        <span class="help-block" id="error"></span>
+                </div>
+            </div>
+
+
+                <div class="form-group">
                             <div class="input-group">
                             <div class="input-group-addon"><span class="glyphicon glyphicon-envelope"></span></div>
                             <input name="email" type="text" class="form-control" placeholder="Email">
@@ -108,7 +145,7 @@
                 <div class="form-footer">
                 <!-- form footer, let say for submit button -->
                     <button type="submit" class="btn btn-info">
-                    <span class="glyphicon glyphicon-log-in"></span>Registrese!
+                    <span class="glyphicon glyphicon-log-in"></span> Guardar Registro
                     </button>
                 </div>
 
