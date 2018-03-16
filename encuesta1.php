@@ -1,4 +1,9 @@
+<?php
+ include 'conexion.php';
+?>
+
 <!DOCTYPE html>
+
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -16,7 +21,7 @@
  
 </head>
 <body>
-        <form class="form-horizontal" method="POST" action="guarda.php">
+        <form class="form-horizontal" method="POST" action="guarda1.php">
                 <fieldset>
                 
                 <!-- Form Name -->
@@ -89,14 +94,6 @@
                 
                 <!-- Text input-->
                 <div class="form-group">
-                        <label class="col-md-4 control-label" for="lNac">Lugar de Nacimiento</label>  
-                        <div class="col-md-4">
-                        <input id="lNac" name="lNac" type="text" value="" placeholder="ingresa tu lugar de nacimiento" class="form-control input-md" required="">
-                        </div>
-                </div>
-
-                <!-- Text input-->
-                <div class="form-group">
                   <label class="col-md-4 control-label" for="depar">Departamento</label>  
                   <div class="col-md-4">
                    <!--<input id="depar" name="depar" type="text" value="" placeholder="ingrese su departamento" class="form-control input-md" required=""> -->
@@ -114,6 +111,13 @@
                       </div>
                 </div>
 
+                <!-- Text input-->
+                <div class="form-group">
+                        <label class="col-md-4 control-label" for="lNac">Lugar de Nacimiento</label>  
+                        <div class="col-md-4">
+                        <input id="lNac" name="lNac" type="text" value="" placeholder="ingresa tu lugar de nacimiento" class="form-control input-md" required="">
+                        </div>
+                </div>
                 
 
                 <!-- Text input-->
@@ -295,9 +299,25 @@
 
                 <!-- Text input-->
                 <div class="form-group">
+                  <label class="col-md-4 control-label" for="anio_bach">Año</label>  
+                  <div class="col-md-4">
+                  <input id="anio_bach" name="anio_bach" type="text" value="" placeholder="ingresa año de bachiller" class="form-control input-md" required="">
+                  </div>
+                </div>
+
+                <!-- Text input-->
+                <div class="form-group">
                   <label class="col-md-4 control-label" for="tit">Titulo Profesional en</label>  
                   <div class="col-md-4">
                   <input id="tit" name="tit" type="text" value="" placeholder="ingresa el nombre de tu titulo profesional" class="form-control input-md" required="">
+                  </div>
+                </div>
+
+                <!-- Text input-->
+                <div class="form-group">
+                  <label class="col-md-4 control-label" for="anio_tit">Año</label>  
+                  <div class="col-md-4">
+                  <input id="anio_tit" name="anio_tit" type="text" value="" placeholder="ingresa el año de profesional" class="form-control input-md" required="">
                   </div>
                 </div>
 
@@ -310,10 +330,27 @@
                 </div>
 
                 <!-- Text input-->
+                <div class="form-group">
+                  <label class="col-md-4 control-label" for="anio_maes">Año</label>  
+                  <div class="col-md-4">
+                  <input id="anio_maes" name="anio_maes" type="text" value="" placeholder="ingresa tu año de maestria" class="form-control input-md" required="">
+                  </div>
+                </div>
+
+              
+                <!-- Text input-->
                 <div class="form-group"> 
                   <label class="col-md-4 control-label" for="doc">Doctorado en</label>  
                   <div class="col-md-4">
                   <input id="doc" name="doc" type="text" value="" placeholder="ingresa el nombre de su doctorado" class="form-control input-md" required="">
+                  </div>
+                </div>
+
+                <!-- Text input-->
+                <div class="form-group">
+                  <label class="col-md-4 control-label" for="anio_doc">Año</label>  
+                  <div class="col-md-4">
+                  <input id="anio_doc" name="anio_doc" type="text" value="" placeholder="ingresa tu año de doctorado" class="form-control input-md" required="">
                   </div>
                 </div>
 
@@ -327,9 +364,25 @@
 
                 <!-- Text input-->
                 <div class="form-group">
+                  <label class="col-md-4 control-label" for="anio_seg">Año</label>  
+                  <div class="col-md-4">
+                  <input id="anio_seg" name="anio_seg" type="text" value="" placeholder="ingresa tu año de segunda especialidad" class="form-control input-md" required="">
+                  </div>
+                </div>
+
+                <!-- Text input-->
+                <div class="form-group">
                   <label class="col-md-4 control-label" for="oth">Otro</label>  
                   <div class="col-md-4">
                   <input id="oth" name="oth" type="text" value="" placeholder="otro" class="form-control input-md" required="">
+                  </div>
+                </div>
+
+                <!-- Text input-->
+                <div class="form-group">
+                  <label class="col-md-4 control-label" for="anio_otr">Año</label>  
+                  <div class="col-md-4">
+                  <input id="anio_otr" name="anio_otr" type="text" value="" placeholder="ingresa año otro" class="form-control input-md" required="">
                   </div>
                 </div>
 
@@ -447,65 +500,65 @@
 
                 <!-- Text input-->
                 <div class="form-group">
-                  <label class="col-md-4 control-label" for="u_clab">Centro Laboral</label>  
+                  <label class="col-md-4 control-label" for="uclab">Ultimo Centro Laboral</label>  
                   <div class="col-md-4">
-                  <input id="u_clab" name="u_clab" type="text" value="" placeholder="ingrese el nombre de su centro laboral" class="form-control input-md" required="">
+                  <input id="uclab" name="uclab" type="text" value="" placeholder="ingrese el nombre de su ultimo centro laboral" class="form-control input-md" required="">
                   </div>
                 </div>
 
                 <!-- Text input-->
                 <div class="form-group">
-                  <label class="col-md-4 control-label" for="u_alab">Area en que Labora</label>  
+                  <label class="col-md-4 control-label" for="ualab">Ultima area en que Laboro</label>  
                   <div class="col-md-4">
-                  <input id="u_alab" name="u_alab" type="text" value="" placeholder="area en la que laboral" class="form-control input-md" required="">
+                  <input id="ualab" name="ualab" type="text" value="" placeholder="Ingrese el nombre del area en la que laboro" class="form-control input-md" required="">
                   </div>
                 </div>
 
                 <!-- Text input-->
                 <div class="form-group">
-                  <label class="col-md-4 control-label" for="u_car">Cargo</label>  
+                  <label class="col-md-4 control-label" for="ucar">Ultimo Cargo</label>  
                   <div class="col-md-4">
-                  <input id="u_car" name="u_car" type="text" value="" placeholder="cargo" class="form-control input-md" required="">
+                  <input id="ucar" name="ucar" type="text" value="" placeholder="Ingrese el nombre del ultimo cargo" class="form-control input-md" required="">
                   </div>
                 </div>
 
                 <!-- Text input-->
                 <div class="form-group">
-                  <label class="col-md-4 control-label" for="u_sec">Sector</label>  
+                  <label class="col-md-4 control-label" for="usec">Sector</label>  
                   <div class="col-md-4">
-                  <input id="u_sec" name="u_sec" type="text" value="" placeholder="publico,privado,etc" class="form-control input-md" required="">
+                  <input id="usec" name="usec" type="text" value="" placeholder="publico,privado,etc" class="form-control input-md" required="">
                   </div>
                 </div>
 
                 <!-- Text input-->
                 <div class="form-group">
-                  <label class="col-md-4 control-label" for="u_fin">Fecha de Inicio</label>  
+                  <label class="col-md-4 control-label" for="ufin">Fecha de Inicio</label>  
                   <div class="col-md-4">
-                  <input id="u_fin" name="u_fin" type="date" value="" placeholder="Fecha de Inicio" class="form-control input-md" required="">
+                  <input id="ufin" name="ufin" type="date" value="" placeholder="Fecha de Inicio" class="form-control input-md" required="">
                   </div>
                 </div>
 
                 <!-- Text input-->
                 <div class="form-group">
-                  <label class="col-md-4 control-label" for="u_fce">Fecha de cese</label>  
+                  <label class="col-md-4 control-label" for="ufce">Fecha de cese</label>  
                   <div class="col-md-4">
-                  <input id="u_fce" name="u_fce" type="date" value="" placeholder="Fecha de cese" class="form-control input-md" required="">
+                  <input id="ufce" name="ufce" type="date" value="" placeholder="Fecha de cese" class="form-control input-md" required="">
                   </div>
                 </div>
 
                 <!-- Text input-->
                 <div class="form-group">
-                  <label class="col-md-4 control-label" for="u_dir">Direccion </label>  
+                  <label class="col-md-4 control-label" for="udir">Direccion </label>  
                   <div class="col-md-4">
-                  <input id="u_dir" name="u_dir" type="text" value="" placeholder="ingrese la direccion " class="form-control input-md" required="">
+                  <input id="udir" name="udir" type="text" value="" placeholder="ingrese la direccion " class="form-control input-md" required="">
                   </div>
                 </div>
 
                 <!-- Text input-->
                 <div class="form-group">
-                  <label class="col-md-4 control-label" for="u_tel1">Telefono</label>  
+                  <label class="col-md-4 control-label" for="utel1">Telefono</label>  
                   <div class="col-md-4">
-                  <input id="u_tel1" name="u_tel1" type="text" value="" placeholder="ingrese el telefono" class="form-control input-md" required="">
+                  <input id="utel1" name="utel1" type="text" value="" placeholder="ingrese el telefono" class="form-control input-md" required="">
                   </div>
                 </div>
 

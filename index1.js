@@ -63,7 +63,7 @@ $(document).ready(function(){
 
     })
     /* hacemos una funcion que se encargara del evento cuando haga click y realizara la funcion q esta adentro function () */
-    $('#enviar').on('submit', function(e){
+    $('#submit').on('submit', function(e){
         alert('funciona')
         alert(depar)
         e.preventDefault();
