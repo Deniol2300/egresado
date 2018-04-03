@@ -3,7 +3,8 @@
  * Formulario de registro de datos parael seguimeitn ode egresados
  */
 
-include 'conexion.php';
+include '../functions/config/conexion.php';
+C:\xampp\htdocs\dashboard\proyecto1\functions\config\conexion.php
 $mysqli= getConn();
 echo " el valor de myslqi: --";
 $verficar_sql1 = mysqli_query($mysqli, "SELECT id,nomb,ap_paterno,ap_materno,cod_univ,DNI,fecha_nac_departamento_id_depart,provincia_id_prov,lugar,dom_ref,email,celular,dom_act,ciudad,pais FROM  datos_personales order by id") ;
@@ -94,8 +95,8 @@ if(isset($_POST['submit']))
     $u_tel1 = $_POST["utel1"];//telefono
 
     //consulta para insertar datos_personales
-    $sql1 = "INSERT INTO datos_personales(id,nomb,ap_paterno,ap_materno,cod_univ,DNI,fecha_nac,sexo,departamento_id_depart,provincia_id_prov,lugar,dom_ref,email,celular,dom_act,ciudad,pais)
-    VALUES(NULL,'$nombre', '$aPaterno', '$aMaterno', '$cUniv', '$dni', '$fnac', '$sexo', '$depar', '$prov', '$lNac', '$rdom', '$email', '$cel', '$adom', '$ciu', '$pais')";
+    $sql1 = "INSERT INTO datos_personales(id,form_registro_id_reg,nomb,ap_paterno,ap_materno,cod_univ,DNI,fecha_nac,sexo,departamento_id_depart,provincia_id_prov,lugar,dom_ref,email,celular,dom_act,ciudad,pais)
+    VALUES(NULL,'$var1','$nombre', '$aPaterno', '$aMaterno', '$cUniv', '$dni', '$fnac', '$sexo', '$depar', '$prov', '$lNac', '$rdom', '$email', '$cel', '$adom', '$ciu', '$pais')";
 
     $mysqli->query($sql1);
     echo 'exito 1';

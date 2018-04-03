@@ -1,6 +1,39 @@
 
 $('document').ready(function()
 {
+    //USAREMOS AJAX PARA LAS ESCUELAS Y FACULTADES  DE LA MISMA FORMA QUE CON LOS DEPARTAMENTOS Y PROVINCIAS
+    $.ajax({
+        type: 'POST',
+        url: 'c_fac.php',
+        data: {'peticion' : 'c_fac'}
+    })
+    .done(function(facultad){
+        $('#fac').html(facultad)
+
+    })
+    .fail(function(){
+        alert('hubo un error a cargar los nombres de departamento')
+    })
+
+    $('#fac').on('change',function(){
+        var id = $('#fac').val()
+        alert(id)
+        $.ajax({
+            type: 'POST',
+            url: 'c_esc.php',
+            data: {'id' : id  }
+        })
+        .done(function(escuela){
+            $('#ep').html(escuela)
+                
+        })
+        .fail(function(){
+            alert('hubo un error a cargar los nombres de provinciase')
+        }) 
+
+    })
+
+    
     //name validation
     var nameregex = /^[a-zA-Z ]+$/;
     $.validator.addMethod("validname", function(value,element){
@@ -165,6 +198,9 @@ $("#register-form").validate({
     alert('ok');
                 }
 });
+
+
+
 
 
 })

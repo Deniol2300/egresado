@@ -47,14 +47,12 @@
         
         <div class="singup-from-container">
 
-            <form role="form" id="register-form" method="post" autocomplete="off" action="none">
+            <form role="form" id="register-form" method="post" autocomplete="off" action="g_registro.php">
 
             <div class="form-header">
               <h3 class="form-title"><i class="fa fa-user"> Registrese! </i></h3>
 
-            <div class="pull-right">
-                <h3 class="form-title"><span class="glyphicon glyphicon-pencil"></span></h3>
-            </div>
+          
 
             </div>
 
@@ -68,13 +66,26 @@
                         <span class="help-block" id="error"></span>
                 </div>
 
-                <div class="form-group">
+                <div class="row">
+
+                
+                <div class="form-group col-lg-6">
                         <div class="input-group">
                             <div class="input-group-addon"><span class="glyphicon glyphicon-user"></span></div>
                             <input type="text" name="dni" class="form-control" placeholder="Ingrese DNI" >
                         </div>
                         <span class="help-block" id="error"></span>
                 </div>
+
+                <div class="form-group col-lg-6">
+                    <div class="input-group">
+                        <div class="input-group-addon"><span class="glyphicon glyphicon-user"></span></div>
+                        <input type="text" name="cuniv" class="form-control" placeholder="Ingrese Codigo Universitario" >
+                    </div>
+                    <span class="help-block" id="error"></span>
+                </div>
+
+            </div>
 
                 <div class="form-group">
                         <div class="input-group">
@@ -92,6 +103,44 @@
                         </div>
                         <span class="help-block" id="error"></span>
                 </div>
+
+            
+                <div class="form-group">
+                    <div class="input-group">
+                        <div class="input-group-addon"><span class="glyphicon glyphicon-pencil"></span></div>
+                        <select name="fac" id="fac" class="form-control"  value="" placeholder="facultad"></select>
+                        
+                    </div>
+                    <span class="help-block" id="error"></span>
+            </div>
+
+            
+            <div class="form-group">
+                    <div class="input-group">
+                        <div class="input-group-addon"><span class="glyphicon glyphicon-pencil"></span></div>
+                        <select name="ep" id="ep" class="form-control"></select>
+                        <!--<input type="text" name="esc" class="form-control" placeholder="Ingrese Escuela" style="text-transform:uppercase;"> -->
+                    </div>
+                    <span class="help-block" id="error"></span>
+            </div> 
+        
+            <!--
+             <div class="form-group">
+                <label class="col-md-4 control-label" for="fac"></label>  
+                <div class="col-md-4">
+                <input id="fac" name="fac" type="text" value="" placeholder="ingrese su facultad" class="form-control input-md" required=""> 
+                <select name="fac" id="fac" class="form-control"></select>
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label class="col-md-4 control-label" for="ep"></label>  
+                <div class="col-md-4">
+                <!--<input id="ep" name="ep" type="text" value="" placeholder="ingrese su escuela profesional" class="form-control input-md" required=""> -->
+               <!-- <select name="ep" id="ep" class="form-control"></select>
+                </div>
+              </div> -->
+            
 
                 <div class="row">
                 <div class="form-group col-lg-6">
@@ -144,7 +193,7 @@
 
                 <div class="form-footer">
                 <!-- form footer, let say for submit button -->
-                    <button type="submit" class="btn btn-info">
+                    <button type="submit" class="btn btn-info" name="submit" value="submit">
                     <span class="glyphicon glyphicon-log-in"></span> Guardar Registro
                     </button>
                 </div>

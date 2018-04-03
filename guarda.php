@@ -2,7 +2,8 @@
 /**
  * Llamamos a la funcion  para la conxion de labase de datos
  */
-require_once 'conexion.php';
+//include '../functions/config/conexion.php';
+ require_once '../functions/config/conexion.php';
 //include 'conexion.php';
 $mysqli = getConn();
 

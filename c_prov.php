@@ -12,7 +12,7 @@ require_once 'conexion.php';
  * Function que se encarga de obtener le nombre de las escuelas
  * return a $esc;
  */ 
-require_once 'conexion.php';
+require_once ('functions/config/conexion.php');
 function getprovincias()
 {
     $mysqli = getConn();

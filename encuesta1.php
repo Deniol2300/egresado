@@ -1,5 +1,6 @@
 <?php
- include 'conexion.php';
+ //include 'conexion.php';
+ include ('functions/config/conexion.php');
 ?>
 
 <!DOCTYPE html>

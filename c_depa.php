@@ -3,7 +3,8 @@
  * Function cargar departamento  para poder selecionar
  * de la lista de departametos
  * */
-require_once 'conexion.php';
+require_once ('functions/config/conexion.php');
+//include '../functions/config/conexion.php';
 
 /**
  * Function getdepartameto que se encarga de obtener los departamentos

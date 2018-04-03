@@ -1,5 +1,5 @@
 <?php
-require_once 'conexion.php';
+require_once ('functions/config/conexion.php');
 
 function getfacultad()
 {
