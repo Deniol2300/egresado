@@ -57,65 +57,7 @@ head();
 		$headervariable="Bienvenido";
 		headervalue($headervariable);
 ?>
-			<div class="row">
-			<div class="col-lg-12">
-				<h2>Elementos que necesita ver</h2>
-			</div>
 			
-
-	<div class="row text-center pad-top">
-			<div class="col-lg-2 col-md-2 col-sm-2 col-xs-6">
-                      <div class="div-square">
-                           <a href="noncgpa.php" >
- 							<i class="fa fa-user fa-5x"></i>
-                      <h4>Informacion Personal</h4>
-                      </a>
-                      </div>         
-                  </div> 
-
-				  <div class="col-lg-2 col-md-2 col-sm-2 col-xs-6">
-                      <div class="div-square">
-                           <a href="submit.php" >
-							 <i class="fa fa-user fa-5x"></i>
-                      <h4>Informacion Academica</h4>
-                      </a>
-                      </div>
-                                                             
-                  </div> 
-				  <div class="col-lg-2 col-md-2 col-sm-2 col-xs-6">
-                      <div class="div-square">
-                           <a href="view.php" >
- 							<i class="fa fa-clipboard fa-5x"></i>
-                      <h4>Informacion Laboral</h4>
-                      </a>
-                      </div>
-                     
-                     
-                  </div>
-
-			<div class="col-lg-2 col-md-2 col-sm-2 col-xs-6">
-                      <div class="div-square">
-                           <a href="../encuesta1.php" >
- 							<i class="fa fa-comments-o fa-5x"></i>
-                      <h4>Encuesta 2018</h4>
-                      </a>
-                      </div>
-     
-                     
-                  </div>
-
-				  <div class="col-lg-2 col-md-2 col-sm-2 col-xs-6">
-                      <div class="div-square">
-                           <a href="../Encuesta_2_formulario.php" >
- 							<i class="fa fa-comments-o fa-5x"></i>
-                      <h4>Encuesta 2018-I</h4>
-                      </a>
-                      </div>
-     
-                     
-                  </div>
-
-	</div>
 			
 			<!-- <div class="col-md-6">	
 				<div class="panel panel-blue">
@@ -219,14 +161,14 @@ head();
 			<!--/.col-->
 		</div>
 	
-	<!-- <script src="../js/jquery-1.11.1.min.js"></script>
+		<script src="../js/jquery-1.11.1.min.js"></script>
 	<script src="../js/bootstrap.min.js"></script>
 	<script src="../js/chart.min.js"></script>
 	<script src="../js/chart-data.js"></script>
 	<script src="../js/easypiechart.js"></script>
 	<script src="../js/easypiechart-data.js"></script>
 	<script src="../js/bootstrap-datepicker.js"></script>
-	<script src="../js/custom.js"></script> -->
+	<script src="../js/custom.js"></script>
 	<?php scripts();?>
 	<script>
 		$('#calendar').datepicker({

@@ -3,11 +3,27 @@
  * Formulario de registro de datos parael seguimeitn ode egresados
  */
 
-include '../functions/config/conexion.php';
-C:\xampp\htdocs\dashboard\proyecto1\functions\config\conexion.php
+require_once 'functions/config/conexion.php';
+//C:\xampp\htdocs\dashboard\proyecto1\functions\config\conexion.php
+require 'g_registro.php';
+//session_start();
+//header("Location:g_registro.php");
+//global $var1;
+//defined('$var1', 1);
+ //$var1 = $_GET['var1'];
+ //$var1=$_SESSION['var1'];
+ var_dump($var2);
+ var_dump($var1);
+// $var3 = $var1;
+// var_dump($var3);
+// $var1 = $_SESSION["var1"];
+//echo 'Hola Sr : '.$_SESSION["var1"];
+
+//echo $var1;
 $mysqli= getConn();
-echo " el valor de myslqi: --";
-$verficar_sql1 = mysqli_query($mysqli, "SELECT id,nomb,ap_paterno,ap_materno,cod_univ,DNI,fecha_nac_departamento_id_depart,provincia_id_prov,lugar,dom_ref,email,celular,dom_act,ciudad,pais FROM  datos_personales order by id") ;
+
+echo " el valor de myslqi: s--".$var1;
+$verficar_sql1 = mysqli_query($mysqli, "SELECT id,form_registro_id_reg,nomb,ap_paterno,ap_materno,cod_univ,DNI,fecha_nac_departamento_id_depart,provincia_id_prov,lugar,dom_ref,email,celular,dom_act,ciudad,pais FROM  datos_personales order by id") ;
 $verificar_sql2 = mysqli_query($mysqli, "SELECT id_dat,nomb_dat,ap_dat,paren_dat,dir_ref,telefono FROM datos_cont order by id_dat");
 $verificar_sql3 = mysqli_query($mysqli, "SELECT id_form,facultad_id_fac,escuela_id_esc,esp_form,ingreso,egreso,terc_sup,quin_sup,grad_bach,anio_bach,tit_prof,maest,anio_maest,doctorado,anio_doc,seg_esp,anio_seg,otro,anio_otr FROM form_univ  order by id_form");
 $verificar_sql4 = mysqli_query($mysqli, "SELECT id_asp,diplom_asp,seg_esp_asp,maest_asp,doc_asp,otro_asp FROM asp_acadm order by id_asp");

@@ -1,14 +1,25 @@
+
+
 <?php
 
 //include 'conexion.php';
-require_once '../functions/config/conexion.php';
-
-define('$var1',1);
+require_once 'functions/config/conexion.php';
+session_start();
+//define('$var1', 1);
+$var2 = "xd";
+$var1 = 1;
+$var1 = $var1++;
+$GLOBALS["var1"];
+$GLOBALS["var2"];
+//header("location:guarda1.php");
+//$var1 = $_POST['var1'];
+var_dump($var2);
+var_dump($var1);
 $mysqli= getConn();
 
 $verificar_sql1 = mysqli_query($mysqli, "SELECT id_reg,dni,cod_univ,ap_patern,ap_materno,nomb,fac,esc,a_ingr,a_fin,email,password,auth FROM form_registro order by id_reg");
-
-if (isset($_POST['submit']))
+//var_dump($_POST);
+if (isset($_POST['enviar']))
 {
     //formulario de registro
     $name = $_POST['name'];
@@ -38,7 +49,7 @@ if (isset($_POST['submit']))
 
     
     $query2 = $mysqli->query($sql2);
-    echo 'exito 2'; 
+    echo '   exito 2'; 
 
     //para ver el error
     $verificar_sql2 = "SELECT id_reg,dni,cod_univ,ap_patern,ap_materno,nomb,fac,esc,a_ingr,a_fin,email,password,auth FROM form_registro order by id_reg";

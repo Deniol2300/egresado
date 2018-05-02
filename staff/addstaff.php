@@ -10,86 +10,95 @@
   
 
  */
-
 require_once '../functions/interfacebasic.php';
 require_once '../functions/config/conexion.php';
-
 session_start();
 $mysqli= getConn();
 if(($_SESSION['user']!="")&&($_SESSION['auth']!=""))
 {
-    if($_SESSION['auth']=="1")
-	{
-	header ('Location: ../staff/index.php'); 
-	}
+     
+	  if($_SESSION['auth']=="0")
+	  {
+		  header('Location: ../student/index.php'); 
+	  }
+    
 }
 else
 {
     session_destroy();
     header('Location: ../index1.php');
 }
-$usern=$_SESSION['user'];
-//var_dump($usern);
+
 head();
 ?>
 
 <body>
 	<?php 
 		navbar(); 
-		sidebar_student();
-		$crumb = "Informacion Personal";
-		//Non-CGPA
+		sidebar();
+		$crumb = "Formacion Academica";
 		breadcrumb($crumb);
-		$headervariable="Detalles";
-		headervalue($headervariable);
-?>
-		<!-- <div class="row">
-			<div class="col-lg-12">
-				<div class="panel panel-default">
-					<div class="panel-heading">Status Details</div>
-					<div class="panel-body">
-						<table data-toggle="table" data-url="tables/data1.json"  data-show-refresh="true" data-show-toggle="true" data-show-columns="true" data-search="true" data-select-item-name="toolbar1" data-pagination="true" data-sort-name="name" data-sort-order="desc">
-						    <thead>
-						    <tr>
-						        <th data-field="state" >Code</th>
-						        <th data-field="id" data-sortable="true">Group</th>
-						        <th data-field="name"  data-sortable="true">Started on</th>
-						        <th data-field="price" data-sortable="true">Completed on</th>
-						        <th data-field="price" data-sortable="true">Status</th>
-						    </tr>
-						    </thead>
-						    <tr>
-						    <?php     
-                       	$selectann=mysqli_query($con,"SELECT * from noncgpa WHERE stu_id='$usern'");
-   						while($row=mysqli_fetch_array($selectann))
-						{
-							$code=$row[2];
-							$group=$row[3];
-							$sdate=$row[4];
-							$edate=$row[5];
-							$stat=$row[6];
-							
-                        ?>
-                        	<td data-field="state" ><?php echo $code;?></td>
-						        <td data-field="id" data-sortable="true"><?php echo $group;?></td>
-						        <td data-field="name"  data-sortable="true"><?php echo $sdate;?></td>
-						        <td data-field="price" data-sortable="true"><?php echo $edate;?></td>
-						        <td data-field="price" data-sortable="true"><?php echo $stat;?></td>
-						        </tr>
-                        <?php
-                         } ?>
-						    
-						</table>
+		$headervariable="Formacion Academica ";
+        headervalue($headervariable);
+        
+    ?>
+     
+		
+		<!-- <div class="col-lg-12">
+			<div class="panel panel-info">
+				<div class="panel-heading">Enter Details</div>
+				<div class="panel-body">
+					<div class="col-md-6">
+						<form role="form" action="" method="post">
+							<div class="form-group">
+									<label>Staff ID</label>
+									<input class="form-control" placeholder="10 digit staff id" type="text" name="staffid">
+							</div>
+																
+							<div class="form-group">
+								<label>Full Name</label>
+								<input type="text" class="form-control" placeholder="Example : John Doe" name="staffname">
+							</div>
+
+							<div class="form-group">
+								<label>Date of joining</label>
+								<input type="date" class="form-control" name="doj">
+							</div>
+
+							<div class="form-group">
+									<label>Department</label>
+									<select class="form-control" name="department">
+										<option value="1001">CA</option>
+										
+									</select>
+							</div>
+
+							<div class="form-group">
+								<label>Mobile Number</label>
+								<input type="date" class="form-control" name="mobile">
+							</div>
+
+							<div class="form-group">
+								<label>Email</label>
+								<input type="email" class="form-control" name="email">
+							</div>
+
+							<div class="form-group">
+								<label>Address</label>
+								<textarea class="form-control" rows="3" name="address"></textarea>
+							</div>
+
+							<div class="form-group">
+							<button type="submit" name="submit" class="btn btn-primary">Submit Button</button>
+							<button type="reset" name="reset" class="btn btn-default">Reset Button</button>
+							</div>
+						</form>
 					</div>
 				</div>
 			</div>
-		</div> -->
-		<?php 
-		// $info_stu = "SELECT id_reg,dni,cod_univ,ap_patern,ap_materno,nomb,fac,esc,a_ingr,a_fin,email,password,auth FROM form_registro order by id_reg";
-		// $res_info_stu =$mysqli->query($info_stu);
-		?>
-	
-	<div class="row">
+        </div> -->
+        
+        <div class="row">
 		<div class="col-lg-12">
 			<div class="panel panel-default">
 				<div class="panel-heading">Detalles</div>
@@ -129,9 +138,8 @@ head();
 						
 						 
 						 <?php
-						 //$dni = $_POST['dni'];
 						 $info_stu = "SELECT id_reg,dni,cod_univ,ap_patern,ap_materno,nomb,form_registro.fac,form_registro.esc,a_ingr,a_fin,email,password,auth,facultad.nomb_fac,escuela.nomb_esc 
-						 FROM form_registro INNER JOIN facultad on form_registro.fac=facultad.id_fac INNER JOIN escuela on form_registro.esc=escuela.id_esc   WHERE cod_univ='$usern' LIMIT 1 	";
+						 FROM form_registro INNER JOIN facultad on form_registro.fac=facultad.id_fac INNER JOIN escuela on form_registro.esc=escuela.id_esc  ";
 						 $res_info_stu =$mysqli->query($info_stu);
 							while ($studiante = $res_info_stu->fetch_object())	
 							{
@@ -161,19 +169,15 @@ head();
 		</div>
 
 	</div>
-	
-		
-	<?php scripts();?>
-	<script src="../js/jquery-1.11.1.min.js"></script>
-	<script src="../js/bootstrap.min.js"></script>
-	<script src="../js/chart.min.js"></script>
-	<script src="../js/chart-data.js"></script>
-	<script src="../js/easypiechart.js"></script>
-	<script src="../js/easypiechart-data.js"></script>
-	<script src="../js/bootstrap-datepicker.js"></script>
-	<script src="../js/bootstrap-table.js"></script>
-	<script>
 
+
+    
+		
+ <?php scripts();?>
+
+	<script src="../js/bootstrap-table.js"></script>
+ 
+	<script>
 		$('#calendar').datepicker({
 		});
 
@@ -194,3 +198,41 @@ head();
 </body>
 
 </html>
+
+    <?php
+if(isset($_POST['submit']))
+     {
+      
+        $staffid=$_POST["staffid"];
+        $staffname=$_POST["staffname"];
+        $doj=$_POST["doj"];
+        $department=$_POST["department"];
+        $mobile=$_POST["mobile"];
+        $email=$_POST["email"];
+        $address=$_POST["address"];
+        $password=md5("staffpassword");
+        $authority="1";
+
+
+        $sql=mysqli_query($con,"INSERT INTO staff(staffid,name,doj,department,mobile,address,email) values('$staffid','$staffname','$doj','$department','$mobile','$address','$email')");
+		$sql1=mysqli_query($con,"INSERT INTO user(username,password,auth) values('$staffid','$password','$authority') ");
+    	
+		if(($sql)&&($sql1))
+		{
+			
+			?>
+			<script type="text/javascript">
+                var e = document.getElementById('error').innerHTML = "<font color='green'><b>Success</font></b>";</script>
+    <?php
+		
+	}
+		else 
+		{
+			?>
+			<script type="text/javascript">
+                var e = document.getElementById('error').innerHTML = "<font color='red'><b>There's been an unexpected error!</font></b>";</script>
+    <?php
+			
+		}
+	}
+?>

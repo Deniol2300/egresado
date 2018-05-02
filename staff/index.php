@@ -34,6 +34,7 @@ $user_id=$_SESSION['user'];
 head();
 ?>
 
+<link href="../css/font-awesome.css" rel="stylesheet">
 <body>
 	<?php 
 		navbar(); 
@@ -44,20 +45,20 @@ head();
 ?>
 			<div class="row">
 			<div class="col-lg-12">
-				<h2>Welcome Admin!</h2>
+				<h2>Bienvenido Administrador!</h2>
 			</div>
 			
-			<div class="col-md-12">
+			<!-- <div class="col-md-12">
 				<div class="panel panel-blue">
 					<div class="panel-heading dark-overlay">Status</div>
 					<div class="panel-body">
 						<p>Escoga opciones de la barra lateral</p>
 					</div>
 				</div>
-			</div><!--/.col-->			
-			<div class="col-md-6">
-			</div>
-		<div class="col-md-12">
+			</div><!--/.col-->			 
+			<!-- <div class="col-md-6">
+			</div> -->
+		<!-- <div class="col-md-12">
 				<div class="panel panel-info">
 					<div class="panel-heading dark-overlay">TAREAS</div>
 					<div class="panel-body">
@@ -74,8 +75,63 @@ head();
                         	<a href='<?php echo $link;?>'><h4><?php echo $title." - ".$posted; ?></h4></a><br>
                         <?php
                          } ?> -->
-					</div>
-				</div>
+					<!-- </div>
+				</div> -->
+
+		<div class="row text-center pad-top">
+			<div class="col-lg-2 col-md-2 col-sm-2 col-xs-6">
+                      <div class="div-square">
+                           <a href="addstu.php" >
+ 							<i class="fa fa-user fa-5x"></i>
+                      <h4>Egresados </h4>
+                      </a>
+                      </div>         
+                  </div> 
+
+				 
+				  <div class="col-lg-2 col-md-2 col-sm-2 col-xs-6">
+                      <div class="div-square">
+                           <a href="addstaff.php" >
+							 <i class="fa fa-user fa-5x"></i>
+                      <h4>Informacion Academica</h4>
+                      </a>
+                      </div>
+                                                             
+                  </div> 
+				  <div class="col-lg-2 col-md-2 col-sm-2 col-xs-6">
+                      <div class="div-square">
+                           <a href="addsubject.php" >
+ 							<i class="fa fa-clipboard fa-5x"></i>
+                      <h4>Informacion Laboral</h4>
+                      </a>
+                      </div>
+                     
+                     
+                  </div>
+
+			<div class="col-lg-2 col-md-2 col-sm-2 col-xs-6">
+                      <div class="div-square">
+                           <a href="../encuesta1.php" >
+ 							<i class="fa fa-comments-o fa-5x"></i>
+                      <h4>Encuesta 2018</h4>
+                      </a>
+                      </div>
+     
+                     
+                  </div>
+
+				  <div class="col-lg-2 col-md-2 col-sm-2 col-xs-6">
+                      <div class="div-square">
+                           <a href="../Encuesta_2_formulario.php" >
+ 							<i class="fa fa-comments-o fa-5x"></i>
+                      <h4>Encuesta 2018-I</h4>
+                      </a>
+                      </div>
+     
+                     
+                  </div>
+
+
 			</div>
 	<?php scripts();?>
 	<script>

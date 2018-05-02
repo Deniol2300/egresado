@@ -66,15 +66,16 @@ function sidebar() {
 		
 		<ul class="nav menu">
 			<li ><a href="index.php"><svg class="glyph stroked dashboard-dial"><use xlink:href="#stroked-dashboard-dial"></use></svg> Dashboard</a></li>
-			<li ><a href="addstu.php"><svg class="glyph stroked male user "><use xlink:href="#stroked-male-user"/></svg> Add Student</a></li>
-			<li><a href="addstaff.php"><svg class="glyph stroked female user"><use xlink:href="#stroked-female-user"/></svg>Add Staff</a></li>
-			<li><a href="addsubject.php"><svg class="glyph stroked clipboard with paper"><use xlink:href="#stroked-clipboard-with-paper"/></svg>Add Subject</a></li>
-			<li><a href="addclass.php"><svg class="glyph stroked app window with content"><use xlink:href="#stroked-app-window-with-content"/></svg>Add Class</a></li>
+			<li ><a href="addstu.php"><svg class="glyph stroked male user "><use xlink:href="#stroked-male-user"/></svg> Egresados</a></li>
+			<li><a href="addstaff.php"><svg class="glyph stroked female user"><use xlink:href="#stroked-female-user"/></svg> Formacion Academica</a></li>
+			<li><a href="addsubject.php"><svg class="glyph stroked clipboard with paper"><use xlink:href="#stroked-clipboard-with-paper"/></svg>Informacion Laboral</a></li>
+			<li><a href="addclass.php"><svg class="glyph stroked app window with content"><use xlink:href="#stroked-app-window-with-content"/></svg>Datos Laborales</a></li>
+			<!--
 			<li><a href="noncgpa.php"><svg class="glyph stroked star"><use xlink:href="#stroked-star"/></svg> Non CGPA entry</a></li>
 			<li><a href="assignment.php"><svg class="glyph stroked pen tip"><use xlink:href="#stroked-pen-tip"/></svg> Assignments</a></li>
 			<li><a href="notification.php"><svg class="glyph stroked pencil"><use xlink:href="#stroked-pencil"></use></svg> Post Notification</a></li>
 			<li><a href="password.php"><svg class="glyph stroked key "><use xlink:href="#stroked-key"/></svg>Reset User Password</a></li>
-			
+			-->
 			
 		</ul>
 

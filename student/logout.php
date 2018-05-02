@@ -18,7 +18,7 @@ unset($_SESSION['auth']);
 $url = "../index1.php";
 if(isset($_GET["session_expired"])) {
 	$url .= "?session_expired=" . $_GET["session_expired"];
-	echo "<h1> Logged out successfully </h1>";
+	echo "<h1> Logged out successfully </h1>";	
 }
 session_destroy();
 //header( "refresh:10;url=../index.php" );
