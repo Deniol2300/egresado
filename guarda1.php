@@ -14,6 +14,10 @@ require 'g_registro.php';
  //$var1=$_SESSION['var1'];
  var_dump($var2);
  var_dump($var1);
+
+
+
+ 
 // $var3 = $var1;
 // var_dump($var3);
 // $var1 = $_SESSION["var1"];

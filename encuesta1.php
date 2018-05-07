@@ -394,14 +394,14 @@
                 <div class="form-group">
                   <label class="col-md-4 control-label" for="dip">Diplomado en</label>  
                   <div class="col-md-4">
-                  <input id="dip" name="dip" type="text" value="" placeholder="ingresa el nombre de tu diplomado" class="form-control input-md" required="">
+                  <input id="dip" name="dip" type="text" value="" placeholder="ingresa el nombre de tu diplomado" class="form-control input-md" >
                   </div>
                 </div>
                 <!-- Text input-->
                 <div class="form-group">
                   <label class="col-md-4 control-label" for="seg1">Segunda Espcialidad en</label>  
                   <div class="col-md-4">
-                  <input id="seg1" name="seg1" type="text" value="" placeholder="ingresa el nombre de segunda especialidad" class="form-control input-md" required="">
+                  <input id="seg1" name="seg1" type="text" value="" placeholder="ingresa el nombre de segunda especialidad" class="form-control input-md" >
                   </div>
                 </div>
                 
@@ -409,7 +409,7 @@
                 <div class="form-group">
                   <label class="col-md-4 control-label" for="maes1">Maestria en</label>  
                   <div class="col-md-4">
-                  <input id="maes1" name="maes1" type="text" value="" placeholder="ingresa el nombre de su maestria" class="form-control input-md" required="">
+                  <input id="maes1" name="maes1" type="text" value="" placeholder="ingresa el nombre de su maestria" class="form-control input-md" >
                   </div>
                 </div>
 
